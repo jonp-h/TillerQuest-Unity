@@ -1,0 +1,23 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/_Project/MiniGames/Tillerio/UI/lobby.uss?fileID=7433441132597879392&amp;guid=8b276c92e5365cc47bd401be545a6404&amp;type=3#lobby"/>
+    <ui:VisualElement name="LobbyPanel" class="panel" style="flex-grow: 1; align-items: center; justify-content: space-between; margin-top: 0%; padding-top: 0%;">
+        <ui:VisualElement name="AuthPanel" style="flex-grow: 1; position: absolute; right: 0; width: 20%; height: 20%;">
+            <ui:Label text="Label" name="PlayerNameText" class="text" style="border-left-color: rgb(140, 49, 49); border-right-color: rgb(140, 49, 49); border-top-color: rgb(140, 49, 49); border-bottom-color: rgb(140, 49, 49); border-bottom-width: 0; text-shadow: 1px 1px 0 rgb(0, 0, 0);"/>
+            <ui:Label text="Label" name="AuthWarning" class="text" style="color: rgb(255, 148, 0); visibility: hidden; text-shadow: 1px 1px 0 rgba(0, 0, 0, 0);"/>
+        </ui:VisualElement>
+        <ui:Image source="project://database/Assets/_Project/MiniGames/Tillerio/Sprites/TillerQuestLogoVertical.svg?fileID=7388822144124034973&amp;guid=cac02e73a1a87e84c8bb7c276ef39fcf&amp;type=3#TillerQuestLogoVertical" name="Image" style="margin-top: 2%; margin-bottom: 2%; width: 50%; height: 40%;"/>
+        <ui:Label text="Tillerio" name="Tillerio" style="-unity-font-style: bold; color: rgb(0, 255, 90); font-size: 74%; position: absolute; rotate: 0 0 55 25deg; top: 30%; left: auto; right: 27%;"/>
+        <ui:VisualElement name="PlayerList" class="menu" style="flex-grow: 1; align-items: center; width: 40%; height: auto; align-self: auto; align-content: auto; justify-content: space-evenly; max-height: 40%; color: rgb(255, 255, 255); font-size: 30px; -unity-font-style: bold; flex-wrap: wrap; flex-shrink: 1;"/>
+        <ui:VisualElement name="PlayerPanel" class="menu" style="flex-grow: 1; align-items: center; width: 40%; height: auto; align-self: auto; align-content: auto; justify-content: space-evenly; max-height: 40%; flex-direction: column; flex-wrap: wrap;">
+            <ui:TextField label="IP Address" placeholder-text="filler text" name="ClientIpInputField" value="127.0.0.1" hide-placeholder-on-focus="false" keyboard-type="NumbersAndPunctuation" style="color: rgb(0, 0, 0); font-size: 50%; width: 346px; border-top-right-radius: 0; border-top-left-radius: 0; border-bottom-right-radius: 0; border-bottom-left-radius: 0; visibility: visible;"/>
+            <ui:Button text="Join Game" name="ClientJoinButton"/>
+            <ui:Button text="Quit" name="QuitButton"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="HostPanel" style="flex-grow: 1; position: absolute; align-self: flex-start; align-content: auto; flex-direction: column; bottom: 0; width: 30%; height: 35%; align-items: center; justify-content: space-around;">
+            <ui:Label text="IP Address" name="IpAddressText" style="-unity-font-style: bold; color: rgb(255, 255, 255); font-size: 40%;"/>
+            <ui:Button text="Host Game" name="HostButton"/>
+            <ui:TextField label="Game Duration (minutes)" placeholder-text="5" name="GameDurationInputField" style="width: 301px; font-size: 20px; height: 48px;"/>
+            <ui:Button text="Start Game" name="StartGameButton" selectable="false" focusable="false" enabled="false"/>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
