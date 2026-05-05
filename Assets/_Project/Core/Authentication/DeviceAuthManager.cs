@@ -295,6 +295,9 @@ namespace TillerQuest.Auth
                     Debug.LogError(
                         $"[DeviceAuthManager] Device code request failed: {request.error}"
                     );
+                    Debug.LogError(
+                        $"[DeviceAuthManager] Response body: {request.downloadHandler.text}"
+                    );
                     callback(null);
                 }
             }
